@@ -36,3 +36,55 @@ header {
   padding: 0;
   box-sizing: border-box;
 }
+/* Header Styling */
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+.search {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#cityInput {
+  padding: 8px;
+  font-size: 16px;
+}
+
+#searchBtn {
+  padding: 8px 12px;
+  margin-left: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}

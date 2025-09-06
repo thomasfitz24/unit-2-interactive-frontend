@@ -1,4 +1,3 @@
-
 # Weather Dashboard
 
 This repository contains my Unit 2 project for the Level 5 Diploma in Web Application Development.
@@ -7,8 +6,11 @@ This repository contains my Unit 2 project for the Level 5 Diploma in Web Applic
 
 The Weather Dashboard is a front-end web application that allows users to search for a city and view the current weather conditions. It is built using HTML, CSS, and JavaScript, with weather data retrieved from the OpenWeatherMap API.
 
-## Features
+## Current Features
 
+- Header and navigation
+- Search bar with input and button
+- Error message placeholder
 - Search for a city
 - Display current temperature and weather conditions
 - Responsive layout
@@ -22,3 +24,8 @@ The Weather Dashboard is a front-end web application that allows users to search
 ## Deployment
 
 (Will update when deployed to GitHub Pages)
+
+## Recent Updates
+
+- Added a navigation menu to the header
+- Styled the header and navigation links for better layout
