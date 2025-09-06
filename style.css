@@ -87,3 +87,73 @@ label {
     gap: 10px;
   }
 }
+.weather-card {
+  max-width: 520px;
+  margin: 20px auto;
+  padding: 16px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.weather-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.weather-nums .temp {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.weather-nums .desc {
+  text-transform: capitalize;
+  margin-top: 6px;
+  text-align: left;
+}
+
+.meta {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.weather-card {
+  max-width: 520px;
+  margin: 20px auto;
+  padding: 16px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  background: #fafafa;
+}
+.weather-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+.weather-nums .temp {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+}
+.weather-nums .desc {
+  text-transform: capitalize;
+  margin-top: 6px;
+  text-align: left;
+}
+.meta {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  padding: 0;
+}
