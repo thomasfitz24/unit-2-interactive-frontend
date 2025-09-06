@@ -1,3 +1,4 @@
+
 # Weather Dashboard
 
 This repository contains my Unit 2 project for the Level 5 Diploma in Web Application Development.
@@ -20,9 +21,12 @@ The Weather Dashboard is a front-end web application that allows users to search
   - Wind speed
   - Sunrise and sunset times
   - Country flag alongside the city name
+- Side-by-side layout:
+  - Today’s weather card is displayed on the **left**
+  - 5-day forecast cards are displayed on the **right**
 - 5-day forecast with daily temperature, min/max values, weather icons, and descriptions
 - Hourly forecast showing the next 12 time slots with temperature, icons, and descriptions
-- Responsive layout that adapts to desktop and mobile devices
+- Responsive layout that adapts to desktop and mobile devices (stacks vertically on smaller screens)
 - Accessible design with ARIA attributes, keyboard focus states, and screen reader support
 - Polished styling with bold temperature highlights, card layouts, and grid-based forecasts
 
@@ -52,6 +56,7 @@ The application connects to the OpenWeatherMap API.
 **Usage:**
 
 - Type a city name and press Enter or click “Get Weather.”
-- The app will display the current weather including temperature, humidity, wind, sunrise, sunset, and description, along with a country flag.
-- A 5-day forecast shows daily temperatures (min/max), icons, and weather descriptions.
-- An hourly forecast shows the next 12 time slots with temperature, icons, and weather descriptions.
+- The app will display:
+  - Current weather on the left (temperature, humidity, wind, sunrise, sunset, country flag, etc.)
+  - A 5-day forecast on the right
+  - An hourly forecast (next 12 slots) below
