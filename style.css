@@ -16,22 +16,27 @@ body {
 header {
   background: #004c3f;
   color: #fff;
-  padding: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
   border-radius: 6px;
   margin-bottom: 20px;
 }
 
-header h1 {
-  margin-bottom: 10px;
+.header-left h1 {
   font-size: 1.8rem;
+}
+
+.header-right {
+  background: #00695c;
+  padding: 8px 16px;
+  border-radius: 4px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -50,39 +55,36 @@ nav a:focus {
 
 /* Search */
 .search {
-  text-align: center;
-  margin: 20px 0;
+  margin: 20px auto;
+  max-width: 700px;
 }
 
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-#cityInput {
-  padding: 10px;
-  font-size: 16px;
-  width: 60%;
-  max-width: 300px;
+.search-bar {
+  display: flex;
   border: 1px solid #ccc;
   border-radius: 4px;
+  overflow: hidden;
 }
 
-#searchBtn {
-  padding: 10px 16px;
-  margin-left: 5px;
+.search-bar input {
+  flex: 1;
+  padding: 12px;
   font-size: 16px;
-  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.search-bar button {
   background: #00796b;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 16px;
   transition: background 0.3s ease-in;
 }
 
-#searchBtn:hover,
-#searchBtn:focus {
+.search-bar button:hover {
   background: #004c3f;
 }
 
@@ -90,6 +92,7 @@ label {
   color: red;
   margin-top: 10px;
   font-weight: bold;
+  text-align: center;
 }
 
 /* Main Forecast Layout */
@@ -252,6 +255,6 @@ label {
   .main-forecast {
     flex-direction: column;
   }
-  #cityInput { width: 80%; }
   nav ul { flex-direction: column; gap: 10px; }
 }
+
