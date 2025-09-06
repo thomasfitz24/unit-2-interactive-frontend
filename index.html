@@ -20,6 +20,7 @@
         </ul>
       </nav>
     </div>
+    <button id="contrastToggle" class="contrast-btn">High Contrast</button>
   </header>
 
   <main>
@@ -31,15 +32,17 @@
       <p id="errorMsg" class="error" role="alert"></p>
     </section>
 
+    <!-- Current weather + 5-day forecast side by side -->
     <section class="main-forecast">
       <div class="weather-result" id="weatherResult" aria-live="polite"></div>
-      <div class="forecast" id="forecast" aria-live="polite">
+      <section class="forecast hidden" id="forecast" aria-live="polite">
         <h2>5-Day Forecast</h2>
         <div class="forecast-grid" id="forecastGrid"></div>
-      </div>
+      </section>
     </section>
 
-    <section class="hourly" id="hourly" aria-live="polite">
+    <!-- Hourly forecast below -->
+    <section class="hourly hidden" id="hourly" aria-live="polite">
       <h2>Hourly Forecast</h2>
       <div class="hourly-grid" id="hourlyGrid"></div>
     </section>
@@ -52,3 +55,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+

@@ -12,6 +12,11 @@ body {
   line-height: 1.6;
 }
 
+/* Utility */
+.hidden {
+  display: none !important;
+}
+
 /* Header - full width */
 header {
   background: #004c3f;
@@ -98,16 +103,28 @@ nav a:focus {
   text-align: center;
 }
 
-/* Main Forecast Layout - full width */
+/* Main Forecast Layout - side by side */
 .main-forecast {
   display: flex;
   gap: 20px;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 30px 0;
   padding: 0 40px;
   width: 100%;
+}
+
+.weather-result {
+  flex: 1 1 300px;
+}
+
+.forecast {
+  flex: 3 1 600px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 /* Current Weather */
@@ -154,14 +171,6 @@ nav a:focus {
 }
 
 /* 5-Day Forecast */
-.forecast {
-  flex: 3 1 500px;
-  background: #fff;
-  border-radius: 6px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
 .forecast h2 {
   margin-bottom: 15px;
   font-size: 1.4rem;
@@ -169,7 +178,7 @@ nav a:focus {
 
 .forecast-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(5, 1fr); /* 5 cards side by side */
   gap: 12px;
 }
 
@@ -203,6 +212,22 @@ nav a:focus {
   text-transform: capitalize;
   font-size: 14px;
   color: #555;
+}
+
+/* Remove list bullets inside cards */
+.forecast-card .meta,
+.hourly-card .meta,
+.weather-card .meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.forecast-card .meta li,
+.hourly-card .meta li {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 4px;
 }
 
 /* Hourly forecast - full width */
@@ -311,26 +336,20 @@ body.high-contrast .search-bar {
 /* Fix forecast + hourly cards in High Contrast */
 body.high-contrast .forecast-card,
 body.high-contrast .hourly-card {
-  background: #000 !important;   /* full black */
-  color: #fff !important;        /* white text */
+  background: #000 !important;
+  color: #fff !important;
   border: 1px solid #fff !important;
 }
 
-/* Make descriptions stand out */
 body.high-contrast .forecast-card .desc,
 body.high-contrast .hourly-card .desc {
-  color: #00ffff !important; /* cyan */
+  color: #00ffff !important;
 }
 
-/* Meta details readable */
 body.high-contrast .forecast-card .meta li,
-body.high-contrast .hourly-card .meta li {
-  background: none !important;
-  color: #fff !important;
-}
-/* Fix current weather meta boxes in High Contrast */
+body.high-contrast .hourly-card .meta li,
 body.high-contrast .weather-card .meta li {
-  background: #000 !important;   /* match high contrast background */
-  color: #fff !important;        /* white text */
+  background: #000 !important;
+  color: #fff !important;
   border: 1px solid #fff !important;
 }
