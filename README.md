@@ -4,37 +4,51 @@ This repository contains my Unit 2 project for the Level 5 Diploma in Web Applic
 
 ## Project Overview
 
-The Weather Dashboard is a front-end web application that allows users to search for a city and view the current weather conditions. It is built using HTML, CSS, and JavaScript, with weather data retrieved from the OpenWeatherMap API.
+The Weather Dashboard is a front-end web application that allows users to search for a city and view the current weather conditions along with a 5-day forecast. It has been developed using HTML, CSS, and JavaScript. The project retrieves live data from the OpenWeatherMap API and displays it in a responsive, user-friendly layout.
 
 ## Current Features
 
-- Header and navigation
+- Header and navigation menu
 - Search bar with input and button
 - Error message placeholder
-- Search for a city
-- Display current temperature and weather conditions
-- Responsive layout
+- Search for a city by name
+- Display of current weather including:
+  - Temperature
+  - Feels-like value
+  - Weather description
+  - Humidity
+  - Wind speed
+  - Sunrise and sunset times
+  - Country flag alongside the city name
+- 5-day forecast with daily temperature, min/max values, weather icons, and descriptions
+- Responsive layout that adapts to desktop and mobile devices
+- Accessible design with ARIA attributes, keyboard focus states, and screen reader support
 
 ## Setup
 
-1. Clone the repository.
-2. Open `index.html` in a browser or run with Live Server in VS Code.
-3. Replace `"YOUR_API_KEY"` in `js/script.js` with your OpenWeatherMap API key.
+1. Clone or download the repository.
+2. Open `index.html` in a browser (or use the Live Server extension in VS Code).
+3. Sign up for a free account at [OpenWeatherMap](https://openweathermap.org/) and obtain an API key.
+4. Insert your API key into `script.js` where indicated.
 
 ## Deployment
 
-(Will update when deployed to GitHub Pages)
-
-## Recent Updates
-
-- Added a navigation menu to the header
-- Styled the header and navigation links for better layout
-
+The project will be deployed to GitHub Pages for live testing and demonstration. Deployment details will be added once live.
 
 ## Accessibility and Responsiveness
 
-- Navigation is keyboard accessible with visible focus states.
-- All inputs have labels for screen readers.
-- Error messages use ARIA roles for accessibility.
-- Weather results update in a live region for assistive tech.
-- Responsive design adapts layout for mobile devices.
+- Navigation can be accessed fully using the keyboard, with visible focus states.
+- All form fields have associated labels for screen reader support.
+- Error messages are announced using ARIA roles.
+- Weather results and forecasts are updated in live regions for assistive technology.
+- Responsive design ensures the layout adjusts for mobile, tablet, and desktop users.
+
+## Weather API
+
+The application connects to the OpenWeatherMap API.
+
+**Usage:**
+
+- Type a city name and press Enter or click “Get Weather.”
+- The app will display the current weather including temperature, humidity, wind, sunrise, sunset, and description, along with a country flag.
+- A 5-day forecast shows daily temperatures (min/max), icons, and weather descriptions.
