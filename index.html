@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unit 2 - Interactive Front End Development</title>
+  <title>Weather Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>Unit 2 Project</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
+    <h1>Weather Dashboard</h1>
   </header>
 
   <main>
-    <p>Welcome to my Unit 2: Interactive Front End Development project.</p>
-    <button id="testButton">Click me</button>
-    <p id="output"></p>
+    <section class="search">
+      <input type="text" id="cityInput" placeholder="Enter city name">
+      <button id="searchBtn">Get Weather</button>
+    </section>
+
+    <section class="weather-result" id="weatherResult">
+      <!-- Weather data will appear here -->
+    </section>
   </main>
 
   <footer>
