@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function renderHourly(list) {
     clearHourly();
-    list.slice(0, 12).forEach(function (d) { // next 12 hours
+    list.slice(0, 12).forEach(function (d) {
       var icon = "https://openweathermap.org/img/wn/" + d.weather[0].icon + "@2x.png";
       var desc = d.weather[0].description;
       var temp = Math.round(d.main.temp);
@@ -60,13 +60,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var data = await r.json();
     if (!r.ok) throw new Error("Forecast not available");
 
-    // Daily forecast (pick 12:00 each day)
     var daily = data.list.filter(function (d) {
       return d.dt_txt.includes("12:00:00");
     });
     renderForecast(daily);
 
-    // Hourly forecast (next 12 slots, 3-hourly intervals)
     renderHourly(data.list);
   }
 
@@ -121,3 +119,4 @@ document.addEventListener("DOMContentLoaded", function () {
   searchBtn.addEventListener("click", handleSearch);
   cityInput.addEventListener("keydown", function (e) { if (e.key === "Enter") handleSearch(); });
 });
+
