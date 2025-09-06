@@ -11,15 +11,44 @@ document.addEventListener("DOMContentLoaded", function () {
   function clearForecast() { forecastGrid.innerHTML = ""; }
   function clearHourly() { hourlyGrid.innerHTML = ""; }
 
+  // Render current weather card
+  function renderCurrentWeather(data) {
+    var sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    var sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    var flag = data.sys.country ? `<img src="https://flagcdn.com/48x36/${data.sys.country.toLowerCase()}.png" alt="${data.sys.country} flag">` : "";
+
+    weatherResult.innerHTML = `
+      <article class="weather-card">
+        <h2>${data.name}, ${data.sys.country} ${flag}</h2>
+        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}">
+        <p class="temp">${Math.round(data.main.temp)}°C</p>
+        <p>${data.weather[0].description}</p>
+        <ul class="meta">
+          <li>Feels like: ${Math.round(data.main.feels_like)}°C</li>
+          <li>Humidity: ${data.main.humidity}%</li>
+          <li>Wind: ${data.wind.speed} m/s</li>
+          <li>Sunrise: ${sunrise}</li>
+          <li>Sunset: ${sunset}</li>
+        </ul>
+      </article>
+    `;
+  }
+
+  // Render 5-day forecast
   function renderForecast(list) {
     clearForecast();
     list.forEach(function (d) {
       var icon = "https://openweathermap.org/img/wn/" + d.weather[0].icon + "@2x.png";
       var desc = d.weather[0].description;
       var temp = Math.round(d.main.temp);
-      var min = Math.round(d.main.temp_min);
-      var max = Math.round(d.main.temp_max);
-      var date = new Date(d.dt * 1000).toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
+      var feels = Math.round(d.main.feels_like);
+      var humidity = d.main.humidity;
+      var wind = d.wind.speed;
+      var date = new Date(d.dt * 1000).toLocaleDateString("en-GB", {
+        weekday: "short",
+        day: "numeric",
+        month: "short"
+      });
 
       var card = document.createElement("div");
       card.className = "forecast-card";
@@ -27,20 +56,31 @@ document.addEventListener("DOMContentLoaded", function () {
         <h3>${date}</h3>
         <img src="${icon}" alt="${desc}">
         <p class="temp">${temp}°C</p>
-        <p>Min: ${min}°C / Max: ${max}°C</p>
         <p class="desc">${desc}</p>
+        <ul class="meta">
+          <li>Feels like: ${feels}°C</li>
+          <li>Humidity: ${humidity}%</li>
+          <li>Wind: ${wind} m/s</li>
+        </ul>
       `;
       forecastGrid.appendChild(card);
     });
   }
 
+  // Render hourly forecast
   function renderHourly(list) {
     clearHourly();
     list.slice(0, 12).forEach(function (d) {
       var icon = "https://openweathermap.org/img/wn/" + d.weather[0].icon + "@2x.png";
       var desc = d.weather[0].description;
       var temp = Math.round(d.main.temp);
-      var time = new Date(d.dt * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+      var feels = Math.round(d.main.feels_like);
+      var humidity = d.main.humidity;
+      var wind = d.wind.speed;
+      var time = new Date(d.dt * 1000).toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit"
+      });
 
       var card = document.createElement("div");
       card.className = "hourly-card";
@@ -49,11 +89,17 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="${icon}" alt="${desc}">
         <p class="temp">${temp}°C</p>
         <p class="desc">${desc}</p>
+        <ul class="meta">
+          <li>Feels like: ${feels}°C</li>
+          <li>Humidity: ${humidity}%</li>
+          <li>Wind: ${wind} m/s</li>
+        </ul>
       `;
       hourlyGrid.appendChild(card);
     });
   }
 
+  // Get forecast by coords
   async function getForecast(lat, lon) {
     var url = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=metric";
     var r = await fetch(url);
@@ -68,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     renderHourly(data.list);
   }
 
+  // Search by city
   async function searchAndRender(q) {
     errorMsg.textContent = "";
     weatherResult.innerHTML = "";
@@ -83,26 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var data = await res.json();
       if (!res.ok) throw new Error("Weather not available");
 
-      var sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-      var sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-      var flag = data.sys.country ? `<img src="https://flagcdn.com/48x36/${data.sys.country.toLowerCase()}.png" alt="${data.sys.country} flag">` : "";
-
-      weatherResult.innerHTML = `
-        <article class="weather-card">
-          <h2>${data.name}, ${data.sys.country} ${flag}</h2>
-          <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}">
-          <p class="temp">${Math.round(data.main.temp)}°C</p>
-          <p>${data.weather[0].description}</p>
-          <ul class="meta">
-            <li>Feels like: ${Math.round(data.main.feels_like)}°C</li>
-            <li>Humidity: ${data.main.humidity}%</li>
-            <li>Wind: ${data.wind.speed} m/s</li>
-            <li>Sunrise: ${sunrise}</li>
-            <li>Sunset: ${sunset}</li>
-          </ul>
-        </article>
-      `;
-
+      renderCurrentWeather(data);
       getForecast(place.lat, place.lon);
 
     } catch (e) {
@@ -110,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Manual search handler
   function handleSearch() {
     var raw = cityInput.value.trim();
     if (!raw) { errorMsg.textContent = "Please enter a city name."; return; }
@@ -118,5 +147,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   searchBtn.addEventListener("click", handleSearch);
   cityInput.addEventListener("keydown", function (e) { if (e.key === "Enter") handleSearch(); });
-});
 
+  // Auto-load weather based on user's location
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+
+  function success(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
+      .then(res => res.json())
+      .then(data => {
+        renderCurrentWeather(data);
+        getForecast(lat, lon);
+      })
+      .catch(err => {
+        console.error("Error fetching local weather:", err);
+      });
+  }
+
+  function error() {
+    console.log("User denied location or it’s unavailable.");
+  }
+});
