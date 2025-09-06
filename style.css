@@ -150,7 +150,7 @@ nav a:focus {
 }
 
 .weather-card .meta {
-  list-style: none;
+  list-style-type: none;
   margin-top: 15px;
   padding: 0;
   display: grid;
@@ -165,7 +165,7 @@ nav a:focus {
   font-size: 14px;
 }
 
-/* Forecast */
+/* 5-Day Forecast */
 .forecast h2 {
   margin-bottom: 15px;
   font-size: 1.4rem;
@@ -209,14 +209,27 @@ nav a:focus {
   color: #555;
 }
 
-/* Hourly */
+.forecast-card .meta {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.forecast-card .meta li {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Hourly forecast */
 .hourly {
-  margin: 20px 0;
+  margin: 20px auto;
   padding: 20px 40px;
   background: #fff;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  width: 100%;
+  width: calc(100% - 80px);
+ 
 }
 
 .hourly h2 {
@@ -260,11 +273,21 @@ nav a:focus {
 
 /* Weather Map */
 .map {
-  margin: 20px 40px;
-  background: #fff;
+  margin: 20px auto;
   padding: 20px;
+  background: #fff;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  width: calc(100% - 80px);
+}
+
+#layerSelect {
+  margin: 10px 0 20px;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
 }
 
 #map {
@@ -380,30 +403,4 @@ body.high-contrast .weather-card .meta li {
   background: #000 !important;
   color: #fff !important;
   border: 1px solid #fff !important;
-}
-/* Remove list bullets inside cards */
-.weather-card .meta,
-.forecast-card .meta,
-.hourly-card .meta {
-  list-style-type: none;   /* Removes bullets */
-  margin: 0;
-  padding: 0;
-}
-
-.weather-card .meta li,
-.forecast-card .meta li,
-.hourly-card .meta li {
-  text-align: center;
-  font-size: 13px;
-  margin-top: 4px;
-}
-/* Hourly forecast */
-.hourly {
-  margin: 20px auto;
-  padding: 20px 40px;
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  width: calc(100% - 80px);  
-  max-width: 1900px;         
 }

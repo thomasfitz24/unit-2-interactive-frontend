@@ -7,11 +7,60 @@ document.addEventListener("DOMContentLoaded", function () {
   var hourlyGrid = document.getElementById("hourlyGrid");
 
   var apiKey = "d98f72edd0e88f4fd41bbd5af84ecc24";
+  var map, marker, overlay;
+  var mapSection = document.getElementById("mapSection");
+  var layerSelect = document.getElementById("layerSelect");
 
+  function showMap(lat, lon) {
+    if (!map) {
+      map = L.map('map').setView([lat, lon], 8);
+
+      // Base map
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+    } else {
+      map.setView([lat, lon], 8);
+      if (marker) {
+        map.removeLayer(marker);
+      }
+    }
+
+    // Add/update marker
+    marker = L.marker([lat, lon]).addTo(map);
+
+    // Add default overlay based on dropdown
+    updateOverlay(layerSelect.value);
+
+    mapSection.classList.remove("hidden");
+  }
+
+  function updateOverlay(layerType) {
+    if (overlay) {
+      map.removeLayer(overlay);
+    }
+    overlay = L.tileLayer(
+      `https://tile.openweathermap.org/map/${layerType}/{z}/{x}/{y}.png?appid=${apiKey}`,
+      { attribution: '&copy; <a href="https://openweathermap.org/">OpenWeatherMap</a>' }
+    ).addTo(map);
+  }
+
+  // Change layer when dropdown changes
+  layerSelect.addEventListener("change", function () {
+    if (map) {
+      updateOverlay(this.value);
+    }
+  });
+
+  // ---- existing forecast + weather code ----
   function clearForecast() { forecastGrid.innerHTML = ""; }
   function clearHourly() { hourlyGrid.innerHTML = ""; }
 
-  // Render current weather card
+  function showSections() {
+    document.getElementById("forecast").classList.remove("hidden");
+    document.getElementById("hourly").classList.remove("hidden");
+  }
+
   function renderCurrentWeather(data) {
     var sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
     var sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
@@ -32,9 +81,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </ul>
       </article>
     `;
+    showSections();
   }
 
-  // Render 5-day forecast
   function renderForecast(list) {
     clearForecast();
     list.forEach(function (d) {
@@ -67,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Render hourly forecast
   function renderHourly(list) {
     clearHourly();
     list.slice(0, 12).forEach(function (d) {
@@ -99,7 +147,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Get forecast by coords
   async function getForecast(lat, lon) {
     var url = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=metric";
     var r = await fetch(url);
@@ -110,11 +157,11 @@ document.addEventListener("DOMContentLoaded", function () {
       return d.dt_txt.includes("12:00:00");
     });
     renderForecast(daily);
-
     renderHourly(data.list);
+    showMap(lat, lon);
+    showSections();
   }
 
-  // Search by city
   async function searchAndRender(q) {
     errorMsg.textContent = "";
     weatherResult.innerHTML = "";
@@ -132,13 +179,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       renderCurrentWeather(data);
       getForecast(place.lat, place.lon);
-
     } catch (e) {
       errorMsg.textContent = e.message;
     }
   }
 
-  // Manual search handler
   function handleSearch() {
     var raw = cityInput.value.trim();
     if (!raw) { errorMsg.textContent = "Please enter a city name."; return; }
@@ -148,7 +193,6 @@ document.addEventListener("DOMContentLoaded", function () {
   searchBtn.addEventListener("click", handleSearch);
   cityInput.addEventListener("keydown", function (e) { if (e.key === "Enter") handleSearch(); });
 
-  // Auto-load weather based on user's location
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success, error);
   }
@@ -171,4 +215,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function error() {
     console.log("User denied location or it’s unavailable.");
   }
+
+  var contrastBtn = document.getElementById("contrastToggle");
+  contrastBtn.addEventListener("click", function () {
+    document.body.classList.toggle("high-contrast");
+    contrastBtn.textContent = document.body.classList.contains("high-contrast")
+      ? "Normal Mode"
+      : "High Contrast";
+  });
 });
