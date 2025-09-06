@@ -11,30 +11,34 @@
     <h1>Weather Dashboard</h1>
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="#" tabindex="0">Home</a></li>
-        <li><a href="#" tabindex="0">About</a></li>
-        <li><a href="#" tabindex="0">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-  <h2>Search for Weather</h2>
-  <section class="search">
-    <label for="cityInput">Enter city name</label>
-    <input type="text" id="cityInput" placeholder="e.g. London" aria-label="City name">
-    <button id="searchBtn">Get Weather</button>
-    <p id="errorMsg" class="error" role="alert"></p>
-  </section>
+    <h2>Search for Weather</h2>
+    <section class="search">
+      <label for="cityInput">Enter city name</label>
+      <input type="text" id="cityInput" placeholder="e.g. London" aria-label="City name">
+      <button id="searchBtn">Get Weather</button>
+      <p id="errorMsg" class="error" role="alert"></p>
+    </section>
 
-  <section class="weather-result" id="weatherResult" aria-live="polite"></section>
+    <section class="weather-result" id="weatherResult" aria-live="polite"></section>
 
-  <section class="forecast" id="forecast" aria-live="polite">
-    <h2>5-Day Forecast</h2>
-    <div class="forecast-grid" id="forecastGrid"></div>
-  </section>
-</main>
+    <section class="forecast" id="forecast" aria-live="polite">
+      <h2>5-Day Forecast</h2>
+      <div class="forecast-grid" id="forecastGrid"></div>
+    </section>
 
+    <section class="hourly" id="hourly" aria-live="polite">
+      <h2>Hourly Forecast</h2>
+      <div class="hourly-grid" id="hourlyGrid"></div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Thomas Fitzgerald</p>
