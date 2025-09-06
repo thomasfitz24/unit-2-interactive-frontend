@@ -4,7 +4,7 @@ This repository contains my Unit 2 project for the Level 5 Diploma in Web Applic
 
 ## Project Overview
 
-The Weather Dashboard is a front-end web application that allows users to search for a city and view the current weather conditions along with a 5-day forecast. It has been developed using HTML, CSS, and JavaScript. The project retrieves live data from the OpenWeatherMap API and displays it in a responsive, user-friendly layout.
+The Weather Dashboard is a front-end web application that allows users to search for a city and view the current weather conditions along with both a 5-day forecast and an hourly forecast. It has been developed using HTML, CSS, and JavaScript. The project retrieves live data from the OpenWeatherMap API and displays it in a responsive, user-friendly layout inspired by the Met Office design.
 
 ## Current Features
 
@@ -21,8 +21,10 @@ The Weather Dashboard is a front-end web application that allows users to search
   - Sunrise and sunset times
   - Country flag alongside the city name
 - 5-day forecast with daily temperature, min/max values, weather icons, and descriptions
+- Hourly forecast showing the next 12 time slots with temperature, icons, and descriptions
 - Responsive layout that adapts to desktop and mobile devices
 - Accessible design with ARIA attributes, keyboard focus states, and screen reader support
+- Polished styling with bold temperature highlights, card layouts, and grid-based forecasts
 
 ## Setup
 
@@ -52,3 +54,4 @@ The application connects to the OpenWeatherMap API.
 - Type a city name and press Enter or click “Get Weather.”
 - The app will display the current weather including temperature, humidity, wind, sunrise, sunset, and description, along with a country flag.
 - A 5-day forecast shows daily temperatures (min/max), icons, and weather descriptions.
+- An hourly forecast shows the next 12 time slots with temperature, icons, and weather descriptions.
