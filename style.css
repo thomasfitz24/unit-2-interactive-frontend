@@ -281,13 +281,46 @@ nav a:focus {
 
 /* Footer */
 footer {
-  text-align: center;
+  background: #004c3f; /* same as header */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px 40px;
   margin-top: 40px;
-  padding: 15px 40px;
+}
+
+footer h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+footer p {
   font-size: 14px;
-  color: #666;
-  width: 100%;
-  background: #f1f1f1;
+  max-width: 400px;
+  line-height: 1.4;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+footer nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in;
+}
+
+footer nav a:hover,
+footer nav a:focus {
+  color: #f1c40f;
+  outline: none;
 }
 
 /* High Contrast Toggle Button */
