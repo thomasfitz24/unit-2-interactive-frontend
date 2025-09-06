@@ -17,12 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const feels = Math.round(data.main?.feels_like);
     const humidity = data.main?.humidity ?? "-";
     const wind = data.wind?.speed ?? "-";
+
     weatherResult.innerHTML = `
       <article class="weather-card" role="region" aria-label="Current weather for ${data.name}">
         <h2>${data.name}</h2>
         <div class="weather-top">
           ${icon ? `<img src="${icon}" alt="${desc}">` : ""}
-          <div class="weather-nums">
+          <div class="weather-stats">
             <p class="temp">${isNaN(temp) ? "-" : temp}°C</p>
             <p class="desc">${desc}</p>
           </div>
