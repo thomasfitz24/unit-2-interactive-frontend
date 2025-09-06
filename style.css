@@ -6,7 +6,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f7fa;
+  background: url("images/autumn-image.jpeg") no-repeat center center fixed;
+  background-size: cover;
   color: #333;
   line-height: 1.6;
 }
@@ -262,4 +263,74 @@ footer {
   color: #666;
   width: 100%;
   background: #f1f1f1;
+}
+
+/* High Contrast Toggle Button */
+.contrast-btn {
+  margin-left: 20px;
+  background: #f1c40f;
+  color: #000;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease-in;
+}
+
+.contrast-btn:hover {
+  background: #d4ac0d;
+}
+
+/* High Contrast Mode */
+body.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.high-contrast .weather-card,
+body.high-contrast .forecast,
+body.high-contrast .hourly {
+  background: #111 !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+
+body.high-contrast nav a {
+  color: #fff !important;
+}
+
+body.high-contrast nav a:hover {
+  color: #f1c40f !important;
+}
+
+body.high-contrast .search-bar {
+  border: 2px solid #fff !important;
+}
+
+/* Fix forecast + hourly cards in High Contrast */
+body.high-contrast .forecast-card,
+body.high-contrast .hourly-card {
+  background: #000 !important;   /* full black */
+  color: #fff !important;        /* white text */
+  border: 1px solid #fff !important;
+}
+
+/* Make descriptions stand out */
+body.high-contrast .forecast-card .desc,
+body.high-contrast .hourly-card .desc {
+  color: #00ffff !important; /* cyan */
+}
+
+/* Meta details readable */
+body.high-contrast .forecast-card .meta li,
+body.high-contrast .hourly-card .meta li {
+  background: none !important;
+  color: #fff !important;
+}
+/* Fix current weather meta boxes in High Contrast */
+body.high-contrast .weather-card .meta li {
+  background: #000 !important;   /* match high contrast background */
+  color: #fff !important;        /* white text */
+  border: 1px solid #fff !important;
 }
