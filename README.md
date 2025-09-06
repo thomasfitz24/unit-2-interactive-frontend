@@ -29,3 +29,12 @@ The Weather Dashboard is a front-end web application that allows users to search
 
 - Added a navigation menu to the header
 - Styled the header and navigation links for better layout
+
+
+## Accessibility and Responsiveness
+
+- Navigation is keyboard accessible with visible focus states.
+- All inputs have labels for screen readers.
+- Error messages use ARIA roles for accessibility.
+- Weather results update in a live region for assistive tech.
+- Responsive design adapts layout for mobile devices.

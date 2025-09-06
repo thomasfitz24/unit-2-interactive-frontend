@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,56 +11,22 @@ body {
 }
 
 header {
-  background: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-
-.search {
-  margin: 20px 0;
-  text-align: center;
-}
-
-#cityInput {
-  padding: 8px;
-  font-size: 16px;
-}
-
-#searchBtn {
-  padding: 8px 12px;
-  margin-left: 5px;
-  font-size: 16px;
-}
-
-.weather-result {
-  text-align: center;
-  margin-top: 20px;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/* Header Styling */
-header {
   background: #2c3e50;
   color: #fff;
   padding: 15px 20px;
+  text-align: center;
 }
 
 header h1 {
   margin-bottom: 10px;
-  text-align: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
-  padding: 0;
-  margin: 0;
 }
 
 nav a {
@@ -63,17 +35,28 @@ nav a {
   font-weight: bold;
 }
 
+nav a:focus,
 nav a:hover {
-  text-decoration: underline;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
+
 .search {
   text-align: center;
   margin: 20px 0;
 }
 
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
 #cityInput {
   padding: 8px;
   font-size: 16px;
+  width: 60%;
+  max-width: 300px;
 }
 
 #searchBtn {
@@ -83,8 +66,24 @@ nav a:hover {
   cursor: pointer;
 }
 
+#searchBtn:focus {
+  outline: 2px solid #2c3e50;
+  outline-offset: 2px;
+}
+
 .error {
   color: red;
   margin-top: 10px;
   font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  #cityInput {
+    width: 80%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

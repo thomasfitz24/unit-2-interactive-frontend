@@ -9,28 +9,28 @@
 <body>
   <header>
     <h1>Weather Dashboard</h1>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" tabindex="0">Home</a></li>
+        <li><a href="#" tabindex="0">About</a></li>
+        <li><a href="#" tabindex="0">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-  <h2>Search for Weather</h2>
-  <section class="search">
-    <input type="text" id="cityInput" placeholder="Enter city name">
-    <button id="searchBtn">Get Weather</button>
-    <p id="errorMsg" class="error"></p>
-  </section>
+    <h2>Search for Weather</h2>
+    <section class="search">
+      <label for="cityInput">Enter city name</label>
+      <input type="text" id="cityInput" placeholder="e.g. London" aria-label="City name">
+      <button id="searchBtn">Get Weather</button>
+      <p id="errorMsg" class="error" role="alert"></p>
+    </section>
 
-  <section class="weather-result" id="weatherResult">
-    <!-- Weather data will appear here -->
-  </section>
-</main>
-
+    <section class="weather-result" id="weatherResult" aria-live="polite">
+      <!-- Weather data will appear here -->
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Thomas Fitzgerald</p>
