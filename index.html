@@ -6,7 +6,7 @@
   <title>SkyCast - Weather Dashboard</title>
   <link rel="stylesheet" href="style.css">
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 <body>
   <!-- Header -->
@@ -30,6 +30,7 @@
   <main>
     <!-- Search -->
     <section class="search">
+      <h2 class="hidden">Search Weather</h2>
       <div class="search-bar">
         <label for="cityInput" class="hidden">Enter city</label>
         <input type="text" id="cityInput" placeholder="Search city...">
@@ -40,6 +41,7 @@
 
     <!-- Current weather + 5-day forecast side by side -->
     <section class="main-forecast">
+      <h2 class="hidden">Main Forecast</h2>
       <div class="weather-result" id="weatherResult" aria-live="polite"></div>
       <section class="forecast hidden" id="forecast" aria-live="polite">
         <h2>5-Day Forecast</h2>
