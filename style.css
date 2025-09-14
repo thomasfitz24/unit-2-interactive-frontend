@@ -229,7 +229,6 @@ nav a:focus {
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   width: calc(100% - 80px);
- 
 }
 
 .hourly h2 {
@@ -340,7 +339,7 @@ footer nav a:focus {
   outline: none;
 }
 
-/* High Contrast */
+/* High Contrast Toggle Button */
 .contrast-btn {
   margin-left: 20px;
   background: #f1c40f;
@@ -352,11 +351,17 @@ footer nav a:focus {
   font-weight: bold;
   transition: background 0.3s ease-in;
 }
+/* Ensure About page text is readable in High Contrast */
+body.about-page.high-contrast p {
+  color: #fff !important;
+}
+
 
 .contrast-btn:hover {
   background: #d4ac0d;
 }
 
+/* High Contrast Mode */
 body.high-contrast {
   background: #000 !important;
   color: #fff !important;
@@ -365,7 +370,9 @@ body.high-contrast {
 body.high-contrast .weather-card,
 body.high-contrast .forecast,
 body.high-contrast .hourly,
-body.high-contrast .map {
+body.high-contrast .map,
+body.high-contrast .about,
+body.high-contrast .contact-form {
   background: #111 !important;
   color: #fff !important;
   border: 2px solid #fff !important;
@@ -399,16 +406,23 @@ body.high-contrast .hourly-card .desc {
 
 body.high-contrast .forecast-card .meta li,
 body.high-contrast .hourly-card .meta li,
-body.high-contrast .weather-card .meta li {
+body.high-contrast .weather-card .meta li,
+body.high-contrast .contact-form input,
+body.high-contrast .contact-form textarea {
   background: #000 !important;
   color: #fff !important;
   border: 1px solid #fff !important;
 }
 
-/* Override for About page */
-body.about-page {
-  background: #fff !important; /* plain white background */
+/* About Page (default + high contrast override) */
+body.about-page:not(.high-contrast) {
+  background: #fff !important;
   color: #333;
+}
+
+body.about-page.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
 }
 
 /* About Page Styling */
@@ -441,6 +455,18 @@ body.about-page {
   font-size: 1rem;
   color: #333;
 }
+
+/* About Page Image */
+.about img {
+  max-width: 2000px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
 /* Contact Form Styling */
 .contact-form {
   max-width: 900px;
@@ -501,4 +527,3 @@ body.about-page {
 .contact-form button:hover {
   background: #004c3f;
 }
-
