@@ -28,6 +28,24 @@ This repository contains my Unit 2 project for the Level 5 Diploma in Web Applic
 - As a visitor, I want to learn about the project on the About page so I understand its purpose and technology.
 - As a user, I want to contact the developer via the Contact form so I can share feedback or ask questions.
 
+
+## Wireframes & Design Rationale
+
+### Design Rationale
+
+SkyCast was designed to be clean, modern, and user-friendly, with a strong focus on readability and accessibility:
+
+- **Autumn theme**: Warm seasonal imagery provides visual appeal and contrast against the white About page.
+- **Card-based layout**: Weather data is grouped into cards (current, forecast, hourly) for clarity and easy scanning.
+- **High Contrast Mode**: Ensures inclusivity for visually impaired users.
+- **Consistent navigation**: Simple header and footer across all pages (Home, About, Contact).
+- **Responsive grid**: Scales across desktop, tablet, and mobile with minimal reflow.
+
+### Wireframes
+
+Initial layout ideas and wireframes were sketched to plan content structure before development.
+ *— homepage, About page, Contact form, map view*).
+
 # Weather Dashboard (SkyCast)
 
 This repository contains my Unit 2 project for the Level 5 Diploma in Web Application Development.
