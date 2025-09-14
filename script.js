@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var mapSection = document.getElementById("mapSection");
   var layerSelect = document.getElementById("layerSelect");
 
+  // Map setup
   function showMap(lat, lon) {
     if (!map) {
       map = L.map('map').setView([lat, lon], 8);
@@ -45,22 +46,24 @@ document.addEventListener("DOMContentLoaded", function () {
     ).addTo(map);
   }
 
-  // Change layer when dropdown changes
+  // Change overlay on dropdown select
   layerSelect.addEventListener("change", function () {
     if (map) {
       updateOverlay(this.value);
     }
   });
 
-  // ---- existing forecast + weather code ----
+  // Utility clears
   function clearForecast() { forecastGrid.innerHTML = ""; }
   function clearHourly() { hourlyGrid.innerHTML = ""; }
 
+  // Reveal hidden sections
   function showSections() {
     document.getElementById("forecast").classList.remove("hidden");
     document.getElementById("hourly").classList.remove("hidden");
   }
 
+  // Render current weather card
   function renderCurrentWeather(data) {
     var sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
     var sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
@@ -84,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showSections();
   }
 
+  // Render 5-day forecast
   function renderForecast(list) {
     clearForecast();
     list.forEach(function (d) {
@@ -116,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Render hourly forecast
   function renderHourly(list) {
     clearHourly();
     list.slice(0, 12).forEach(function (d) {
@@ -147,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Get forecast by coords
   async function getForecast(lat, lon) {
     var url = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=metric";
     var r = await fetch(url);
@@ -162,6 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showSections();
   }
 
+  // Search by city
   async function searchAndRender(q) {
     errorMsg.textContent = "";
     weatherResult.innerHTML = "";
@@ -179,20 +186,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
       renderCurrentWeather(data);
       getForecast(place.lat, place.lon);
+
     } catch (e) {
       errorMsg.textContent = e.message;
+
+      // ✅ Hide sections when search fails
+      document.getElementById("forecast").classList.add("hidden");
+      document.getElementById("hourly").classList.add("hidden");
+      document.getElementById("mapSection").classList.add("hidden");
     }
   }
 
+  // Handle search
   function handleSearch() {
     var raw = cityInput.value.trim();
-    if (!raw) { errorMsg.textContent = "Please enter a city name."; return; }
+    if (!raw) {
+      errorMsg.textContent = "Please enter a city name.";
+      return;
+    }
     searchAndRender(raw);
   }
 
   searchBtn.addEventListener("click", handleSearch);
-  cityInput.addEventListener("keydown", function (e) { if (e.key === "Enter") handleSearch(); });
+  cityInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") handleSearch();
+  });
 
+  // Auto-load weather from user's location
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success, error);
   }
@@ -216,6 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("User denied location or it’s unavailable.");
   }
 
+  // High Contrast Toggle
   var contrastBtn = document.getElementById("contrastToggle");
   contrastBtn.addEventListener("click", function () {
     document.body.classList.toggle("high-contrast");
