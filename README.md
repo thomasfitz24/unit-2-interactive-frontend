@@ -1,3 +1,20 @@
+# Weather Dashboard (SkyCast)
+
+This repository contains my Unit 2 project for the Level 5 Diploma in Web Application Development.
+
+---
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Accessibility](#accessibility)
+- [Color Palette](#color-palette)
+- [Typography](#typography)
+- [Setup](#setup)
+- [Deployment](#deployment)
+- [Development Process](#development-process)
+- [Future Enhancements](#future-enhancements)
 
 # Weather Dashboard (SkyCast)
 
