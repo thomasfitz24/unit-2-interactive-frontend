@@ -73,6 +73,63 @@ The site has been thoroughly tested on iPhone and iPad devices to ensure full re
 *(Insert screenshots here from your testing)*
 
 
+## Development Notes & Workflow
+
+The development of SkyCast was carried out in iterative stages, with version control used throughout to track changes and document progress. Below is a summary of the workflow, challenges, and fixes implemented:
+
+### Initial Setup
+
+* Created a new GitHub repository and initialized project files: `index.html`, `style.css`, and `script.js`.
+* Linked repository to GitHub for version control and pushing commits.
+* Added Leaflet.js and OpenWeatherMap API integration references.
+
+### Layout & Structure
+
+* Built core layout with  **header, navigation, and search bar** .
+* Added placeholder sections for weather results, forecasts, and map.
+* Styled with an **autumn background image** and **card-based layout** for readability.
+
+### Weather Integration
+
+* Connected to **OpenWeatherMap API** for live weather data.
+* Implemented  **current weather** ,  **5-day forecast** , and **hourly forecast** features.
+* Ensured data displays dynamically with icons, temperatures, humidity, wind, sunrise, and sunset times.
+
+### Accessibility & Error Handling
+
+* Added **High Contrast Mode toggle** with color-coded highlights.
+* Implemented ARIA roles and live regions so screen readers announce weather changes.
+* Added error handling: when invalid searches occur, forecast/map sections are hidden and error message displayed.
+
+### Map Integration
+
+* Integrated **Leaflet.js** with OpenStreetMap tiles.
+* Added selectable overlay layers for **Clouds, Precipitation, Temperature, and Wind** using OpenWeatherMap layers.
+* Made map responsive and hidden until a city is searched or geolocation is granted.
+
+### Mobile & Tablet Responsiveness
+
+* Styled responsive layouts for  **iPhone and iPad** , fixing:
+  * Header/nav alignment.
+  * Search bar stacking vertically on mobile.
+  * Forecast grid adapting from 5-columns → 1-column (mobile) → 2-columns (tablet).
+  * Hourly grid limited to 2 cards per row on mobile.
+  * Footer stacked with centered alignment.
+* Tested extensively with screenshots taken from Chrome DevTools + real devices.
+
+### Validation & Fixes
+
+* Ran **W3C HTML Validator** on all pages: fixed issues with `aria-current`, missing labels, and duplicate attributes.
+* Cleaned up CSS to remove redundant code and ensure no style errors.
+* Confirmed accessibility compliance with keyboard navigation and visible focus states.
+
+### Final Testing & Polish
+
+* Verified across multiple browsers (Chrome, Safari, Edge).
+* Ensured **consistency between About, Contact, and Index pages** with shared header/footer.
+* Confirmed no broken file paths (case sensitivity fixed for GitHub Pages).
+* Prepared README and documentation for submission.
+
 ## Accessibility Notes
 
 Accessibility was a key focus during development to ensure inclusivity:
