@@ -24,6 +24,7 @@
     <button id="contrastToggle" class="contrast-btn">High Contrast</button>
   </header>
 
+  <!-- Main Content -->
   <main>
     <!-- Contact Info Section -->
     <section class="contact-intro">
@@ -46,15 +47,15 @@
     <!-- Contact Form -->
     <section class="contact-form">
       <h2>Contact Us</h2>
-      <form action="#" method="post">
+      <form id="contactForm" action="#" method="post">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required aria-required="true">
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required aria-required="true">
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
 
         <button type="submit">Send Message</button>
       </form>
@@ -78,6 +79,7 @@
     </div>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>

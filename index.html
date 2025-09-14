@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="header-left">
       <h1>SkyCast</h1>
@@ -16,7 +17,7 @@
     <div class="header-right">
       <nav aria-label="Main navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -25,9 +26,12 @@
     <button id="contrastToggle" class="contrast-btn">High Contrast</button>
   </header>
 
+  <!-- Main Content -->
   <main>
+    <!-- Search -->
     <section class="search">
       <div class="search-bar">
+        <label for="cityInput" class="hidden">Enter city</label>
         <input type="text" id="cityInput" placeholder="Search city...">
         <button id="searchBtn">Get Weather</button>
       </div>
@@ -63,6 +67,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-left">
       <h2>SkyCast</h2>
@@ -71,15 +76,15 @@
     <div class="footer-right">
       <nav aria-label="Footer navigation">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </footer>
 
-  <!-- Leaflet JS -->
+  <!-- JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>

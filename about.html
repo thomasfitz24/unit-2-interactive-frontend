@@ -24,14 +24,14 @@
     <button id="contrastToggle" class="contrast-btn">High Contrast</button>
   </header>
 
-  <main>
-  <section class="about">
-    <img src="images/about.jpeg" alt="About SkyCast">
-  </section>
-</main>
-
   <!-- Main content -->
   <main>
+    <!-- About Image -->
+    <section class="about">
+      <img src="images/about.jpeg" alt="About SkyCast">
+    </section>
+
+    <!-- About Info -->
     <section class="about">
       <h2>About SkyCast</h2>
       <p>
@@ -67,26 +67,24 @@
         multi-language support, and generating trend charts for temperature, wind, and humidity.
       </p>
     </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contactForm" action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </main>
-
-<main>
-  <section class="contact-form">
-    <h2>Contact Us</h2>
-    <form id="contactForm" action="#" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-</main>
-
 
   <!-- Footer -->
   <footer>
@@ -99,7 +97,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -108,4 +106,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
