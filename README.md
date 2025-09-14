@@ -73,6 +73,18 @@ The site has been thoroughly tested on iPhone and iPad devices to ensure full re
 *(Insert screenshots here from your testing)*
 
 
+## Accessibility Notes
+
+Accessibility was a key focus during development to ensure inclusivity:
+
+* **High Contrast Mode** toggle improves readability for visually impaired users.
+* **Semantic HTML5** elements used throughout for clear document structure.
+* **ARIA roles and live regions** applied to navigation, weather updates, and error messages for screen reader compatibility.
+* **Keyboard navigation** fully supported with visible focus indicators.
+* **Form labels** linked to inputs for screen reader accessibility.
+* **Color contrast** tested in both default and High Contrast modes to meet WCAG standards.
+* **Responsive typography and layouts** to prevent zoom or scrolling issues on small devices.
+
 # Weather Dashboard (SkyCast)
 
 This repository contains my Unit 2 project for the Level 5 Diploma in Web Application Development.
