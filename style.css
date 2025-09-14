@@ -404,3 +404,9 @@ body.high-contrast .weather-card .meta li {
   color: #fff !important;
   border: 1px solid #fff !important;
 }
+
+/* Override for About page */
+body.about-page {
+  background: #fff !important; /* plain white background */
+  color: #333;
+}
