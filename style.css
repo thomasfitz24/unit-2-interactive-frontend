@@ -527,3 +527,39 @@ body.about-page.high-contrast {
 .contact-form button:hover {
   background: #004c3f;
 }
+
+/* Contact Page (default + high contrast override) */
+body.contact-page:not(.high-contrast) {
+  background: #fff !important;
+  color: #333;
+}
+
+body.contact-page.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* Contact Page High Contrast Fixes */
+body.contact-page.high-contrast h2,
+body.contact-page.high-contrast label,
+body.contact-page.high-contrast p {
+  color: #fff !important;
+}
+
+body.contact-page.high-contrast input,
+body.contact-page.high-contrast textarea {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+body.contact-page.high-contrast button {
+  background: #f1c40f !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+}
+
+body.contact-page.high-contrast button:hover {
+  background: #d4ac0d !important;
+  color: #000 !important;
+}

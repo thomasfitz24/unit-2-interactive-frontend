@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - SkyCast</title>
+  <title>Contact - SkyCast</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="about-page">
+<body class="contact-page">
   <!-- Header -->
   <header>
     <div class="header-left">
@@ -16,8 +16,8 @@
       <nav aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -25,27 +25,24 @@
   </header>
 
   <main>
-    <section>
-      <h1>Contact Us</h1>
-      <form class="contact-form">
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
         <button type="submit">Send Message</button>
       </form>
     </section>
+  </main>
 
-
-<!-- Footer -->
+  <!-- Footer -->
   <footer>
     <div class="footer-left">
       <h2>SkyCast</h2>
@@ -55,9 +52,13 @@
       <nav aria-label="Footer navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </div>
   </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
