@@ -186,7 +186,6 @@ The project has  **58 commits** , documenting incremental development. Screensho
 16. <img width="1907" height="993" alt="Screenshot 2025-09-06 at 21 04 09" src="https://github.com/user-attachments/assets/da4dad81-2b6e-40f0-bc89-2a320d131f25" />
 17. Added search section with styling and README update
 18. Set up base JavaScript structure for search button
-19. <img width="1920" height="991" alt="Screenshot 2025-09-06 at 21 07 52" src="https://github.com/user-attachments/assets/59f21ec7-0fa8-423e-ae6b-25c54f54d750" />
 20. Improved accessibility and responsiveness for all devices and impaired users
 21. Inserted OpenWeatherMap API key and tested weather fetch
 22. <img width="1919" height="1071" alt="Screenshot 2025-09-06 at 21 16 17" src="https://github.com/user-attachments/assets/a68de589-4de3-4c86-8fca-1332021fd714" />
@@ -195,47 +194,49 @@ The project has  **58 commits** , documenting incremental development. Screensho
 25. Geocoding-based weather fetch and styled result card
 26. Rename weather-nums to weather-stats; clean duplicate CSS
 27. Added 5-day forecast section with cards and updated styles
-28. Updated README to include new features: sunrise, sunset, flags, forecast details
-29. Full update: current weather with flag/sunrise/sunset, 5-day forecast, hourly forecast, Met Office styling
-30. Updated README to include hourly forecast and styling changes
-31. Updated layout: current weather on left, 5-day forecast on right
-32. Updated README to document new side-by-side layout for current weather and forecast
-33. Updated header with SkyCast branding, boxed nav links, redesigned search bar
-34. Made search bar responsive with max-width and mobile adjustments
-35. Unified header, main forecast, and hourly forecast widths for consistent layout
-36. Updated layout: all sections full-width to fit any screen
-37. Fixed High Contrast mode: current weather meta boxes visible with dark background and high contrast text
-38. Updated README with High Contrast Mode details, full color palette with hex codes, typography, and development process for assignment
-39. Added geolocation support: auto-loads weather for user's current location
-40. Fixed layout: current weather and 5-day forecast side by side, corrected loading/render issues
-41. Updated footer: matched header color, added navigation links, and included company description
-42. Updated header padding to 40px 40px for consistent spacing
-43. Fixed styling: removed bullet points from meta lists and aligned hourly forecast with main layout
-44. Added interactive weather map with selectable overlay layers (Clouds, Precipitation, Temperature, Wind)
-45. Updated README with new features: weather map overlays, styling fixes, and accessibility improvements
-46. Fix: hide forecast, hourly, and map sections when city search fails
-47. Created about.html file, starting About page
-48. Added base layout for about.html with header and footer
-49. Removed background image from about.html by applying about-page override
-50. Expanded About page with Our Story, Technology, Commitment sections and styled with card layout
-51. Added contact form to About page and adjusted styling to match About section width
-52. Updated README with About page, Contact form, weather map, and styling improvements
-53. Fix: Enable high contrast toggle on About page (prevents JS errors)
-54. Fix: Make About page paragraph text white in High Contrast mode
-55. Add: Initial Contact page with header and footer
-56. Add: Basic contact form structure to Contact page
-57. Update: Contact page with white background and high contrast support
-58. Update: Added info section to Contact page
-59. Checkpoint: Current state before fixing GitHub Pages heading/image issues
-60. Fix: cleaned HTML structure, updated footer links, improved accessibility across pages
-61. Docs: added Table of Contents to README
-62. Docs: added User Stories section to README
-63. Docs: added Wireframes & Design Rationale section to README
-64. Fix: corrected new W3C validation errors on index.html (semantic structure and attribute fixes)
-65. Fix: W3C validation errors on about.html (added hidden heading to first section for accessibility and structure)
-66. Docs: updated README with mobile/tablet considerations and testing notes
-67. Docs: add Accessibility Notes section to README
-68. Expanded Development Process section into detailed Development Notes & Workflow, including mobile fixes, accessibility, and validation updates
+28. <img width="1920" height="980" alt="Screenshot 2025-09-06 at 21 19 10" src="https://github.com/user-attachments/assets/aa33eefc-7f3b-482f-a98b-dad4e94e016d" />
+29. Updated README to include new features: sunrise, sunset, flags, forecast details
+30. Full update: current weather with flag/sunrise/sunset, 5-day forecast, hourly forecast, Met Office styling
+31. 
+32. Updated README to include hourly forecast and styling changes
+33. Updated layout: current weather on left, 5-day forecast on right
+34. Updated README to document new side-by-side layout for current weather and forecast
+35. Updated header with SkyCast branding, boxed nav links, redesigned search bar
+36. Made search bar responsive with max-width and mobile adjustments
+37. Unified header, main forecast, and hourly forecast widths for consistent layout
+38. Updated layout: all sections full-width to fit any screen
+39. Fixed High Contrast mode: current weather meta boxes visible with dark background and high contrast text
+40. Updated README with High Contrast Mode details, full color palette with hex codes, typography, and development process for assignment
+41. Added geolocation support: auto-loads weather for user's current location
+42. Fixed layout: current weather and 5-day forecast side by side, corrected loading/render issues
+43. Updated footer: matched header color, added navigation links, and included company description
+44. Updated header padding to 40px 40px for consistent spacing
+45. Fixed styling: removed bullet points from meta lists and aligned hourly forecast with main layout
+46. Added interactive weather map with selectable overlay layers (Clouds, Precipitation, Temperature, Wind)
+47. Updated README with new features: weather map overlays, styling fixes, and accessibility improvements
+48. Fix: hide forecast, hourly, and map sections when city search fails
+49. Created about.html file, starting About page
+50. Added base layout for about.html with header and footer
+51. Removed background image from about.html by applying about-page override
+52. Expanded About page with Our Story, Technology, Commitment sections and styled with card layout
+53. Added contact form to About page and adjusted styling to match About section width
+54. Updated README with About page, Contact form, weather map, and styling improvements
+55. Fix: Enable high contrast toggle on About page (prevents JS errors)
+56. Fix: Make About page paragraph text white in High Contrast mode
+57. Add: Initial Contact page with header and footer
+58. Add: Basic contact form structure to Contact page
+59. Update: Contact page with white background and high contrast support
+60. Update: Added info section to Contact page
+61. Checkpoint: Current state before fixing GitHub Pages heading/image issues
+62. Fix: cleaned HTML structure, updated footer links, improved accessibility across pages
+63. Docs: added Table of Contents to README
+64. Docs: added User Stories section to README
+65. Docs: added Wireframes & Design Rationale section to README
+66. Fix: corrected new W3C validation errors on index.html (semantic structure and attribute fixes)
+67. Fix: W3C validation errors on about.html (added hidden heading to first section for accessibility and structure)
+68. Docs: updated README with mobile/tablet considerations and testing notes
+69. Docs: add Accessibility Notes section to README
+70. Expanded Development Process section into detailed Development Notes & Workflow, including mobile fixes, accessibility, and validation updates
 
 *(Insert commit screenshots alongside each entry here)*
 
