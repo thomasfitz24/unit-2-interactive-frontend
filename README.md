@@ -67,8 +67,10 @@ The dashboard is fully responsive, visually engaging with an autumn background i
 * **Responsive grid** : adapts smoothly to all devices.
 
 ### Wireframes
+<img width="1024" height="1536" alt="Wireframes3" src="https://github.com/user-attachments/assets/2761a11c-5a5e-4c2c-bc4a-1af71af00746" />
+<img width="1024" height="1536" alt="Wireframes2" src="https://github.com/user-attachments/assets/d26c506a-c6e6-4d44-a61f-0440bdb15fab" />
+<img width="1024" height="1536" alt="Wireframes" src="https://github.com/user-attachments/assets/43f474c8-7768-4050-a992-bf5a27d49601" />
 
-*(Insert wireframe screenshots here)*
 
 ---
 
@@ -85,7 +87,19 @@ The site was tested on iPhone and iPad to ensure responsiveness.
 * Map height reduces on smaller screens.
 * Footer stacks vertically and centers text.
 
-*(Insert screenshots from testing here)*
+
+  
+<img width="563" height="990" alt="Screenshot 2025-09-14 at 17 26 42" src="https://github.com/user-attachments/assets/700b4a7e-f1f8-490b-80a1-e60bca388268" />
+<img width="637" height="982" alt="Screenshot 2025-09-14 at 17 26 36" src="https://github.com/user-attachments/assets/da36482e-4bca-4bd6-bfdb-2472bd66d7ac" />
+<img width="650" height="976" alt="Screenshot 2025-09-14 at 17 26 24" src="https://github.com/user-attachments/assets/21bec2d8-ef7c-47dd-825d-f3f1696cbdb7" />
+<img width="652" height="986" alt="Screenshot 2025-09-14 at 17 26 15" src="https://github.com/user-attachments/assets/af7e4949-6905-48f0-8dde-8fd3ced29205" />
+<img width="732" height="962" alt="Screenshot 2025-09-14 at 17 26 07" src="https://github.com/user-attachments/assets/19d8a134-590a-45a1-96bf-68ef6c2662d7" />
+<img width="695" height="963" alt="Screenshot 2025-09-14 at 17 26 00" src="https://github.com/user-attachments/assets/d27ecf2b-87fc-4bf7-bb49-70474baa3255" />
+<img width="735" height="967" alt="Screenshot 2025-09-14 at 17 25 50" src="https://github.com/user-attachments/assets/b304aa76-b3b8-4e23-835c-29b8d62c23d8" />
+<img width="677" height="956" alt="Screenshot 2025-09-14 at 17 25 44" src="https://github.com/user-attachments/assets/1417a4b7-2761-4fbd-bcc1-179d8d7111a1" />
+<img width="635" height="592" alt="Screenshot 2025-09-14 at 17 23 24" src="https://github.com/user-attachments/assets/ccf012fe-ea7d-49f8-9c77-f2a18baee6f5" />
+<img width="599" height="896" alt="Screenshot 2025-09-14 at 17 21 15" src="https://github.com/user-attachments/assets/ed028fe1-2de6-4797-b8ce-b536c77ef855" />
+<img width="464" height="901" alt="Screenshot 2025-09-14 at 17 21 10" src="https://github.com/user-attachments/assets/fd62825a-3761-44d4-b6a9-ff32ef8dbd1d" />
 
 ---
 
@@ -312,6 +326,10 @@ The project has  **58 commits** , documenting incremental development. Screensho
 ## Final Notes
 
 * All pages validated with **W3C** – no errors.
+<img width="1917" height="991" alt="Screenshot 2025-09-14 at 17 09 02" src="https://github.com/user-attachments/assets/93ad0c40-7489-4401-9ce0-2de8e738aa4b" />
+<img width="1924" height="984" alt="Screenshot 2025-09-14 at 17 14 28" src="https://github.com/user-attachments/assets/90a1fd7c-92a3-4bac-b5ac-4aee4636d50b" />
+<img width="1917" height="993" alt="Screenshot 2025-09-14 at 17 12 53" src="https://github.com/user-attachments/assets/9a9f8912-8a2b-40f4-88e2-55cb1a54e834" />
+
 * Fully tested on iPhone/iPad with screenshots.
 * Accessibility implemented (contrast, ARIA, keyboard navigation).
 * 58 commits logged for version control.
