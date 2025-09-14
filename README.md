@@ -16,6 +16,18 @@ This repository contains my Unit 2 project for the Level 5 Diploma in Web Applic
 - [Development Process](#development-process)
 - [Future Enhancements](#future-enhancements)
 
+
+
+## User Stories
+
+- As a user, I want to search for a city so I can view current weather conditions.
+- As a user, I want to see a 5-day forecast so I can plan ahead for the week.
+- As a user, I want an hourly forecast so I can prepare for short-term changes in the weather.
+- As a visually impaired user, I want to toggle High Contrast Mode so I can read the content more easily.
+- As a user, I want to see an interactive weather map so I can explore different locations visually.
+- As a visitor, I want to learn about the project on the About page so I understand its purpose and technology.
+- As a user, I want to contact the developer via the Contact form so I can share feedback or ask questions.
+
 # Weather Dashboard (SkyCast)
 
 This repository contains my Unit 2 project for the Level 5 Diploma in Web Application Development.
