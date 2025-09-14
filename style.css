@@ -351,17 +351,14 @@ footer nav a:focus {
   font-weight: bold;
   transition: background 0.3s ease-in;
 }
-/* Ensure About page text is readable in High Contrast */
-body.about-page.high-contrast p {
-  color: #fff !important;
-}
-
 
 .contrast-btn:hover {
   background: #d4ac0d;
 }
 
-/* High Contrast Mode */
+/* --------------------------
+   High Contrast Global
+--------------------------- */
 body.high-contrast {
   background: #000 !important;
   color: #fff !important;
@@ -372,7 +369,8 @@ body.high-contrast .forecast,
 body.high-contrast .hourly,
 body.high-contrast .map,
 body.high-contrast .about,
-body.high-contrast .contact-form {
+body.high-contrast .contact-form,
+body.high-contrast .contact-intro {
   background: #111 !important;
   color: #fff !important;
   border: 2px solid #fff !important;
@@ -414,18 +412,14 @@ body.high-contrast .contact-form textarea {
   border: 1px solid #fff !important;
 }
 
-/* About Page (default + high contrast override) */
+/* --------------------------
+   About Page
+--------------------------- */
 body.about-page:not(.high-contrast) {
   background: #fff !important;
   color: #333;
 }
 
-body.about-page.high-contrast {
-  background: #000 !important;
-  color: #fff !important;
-}
-
-/* About Page Styling */
 .about {
   max-width: 900px;
   margin: 40px auto;
@@ -456,7 +450,6 @@ body.about-page.high-contrast {
   color: #333;
 }
 
-/* About Page Image */
 .about img {
   max-width: 2000px;
   width: 100%;
@@ -467,7 +460,47 @@ body.about-page.high-contrast {
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-/* Contact Form Styling */
+/* --------------------------
+   Contact Page
+--------------------------- */
+body.contact-page:not(.high-contrast) {
+  background: #fff !important;
+  color: #333;
+}
+
+.contact-intro {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  line-height: 1.7;
+}
+
+.contact-intro h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #004c3f;
+}
+
+.contact-intro p,
+.contact-intro ul {
+  color: #333;
+}
+
+.contact-intro ul {
+  list-style: disc inside;
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.contact-intro ul li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
 .contact-form {
   max-width: 900px;
   margin: 40px auto;
@@ -528,24 +561,43 @@ body.about-page.high-contrast {
   background: #004c3f;
 }
 
-/* Contact Page (default + high contrast override) */
-body.contact-page:not(.high-contrast) {
-  background: #fff !important;
-  color: #333;
-}
-
-body.contact-page.high-contrast {
-  background: #000 !important;
-  color: #fff !important;
-}
-
-/* Contact Page High Contrast Fixes */
+/* --------------------------
+   High Contrast: About & Contact Overrides
+--------------------------- */
+body.about-page.high-contrast h1,
+body.about-page.high-contrast h2,
+body.about-page.high-contrast h3,
+body.about-page.high-contrast p,
+body.about-page.high-contrast label,
+body.about-page.high-contrast li,
+body.contact-page.high-contrast h1,
 body.contact-page.high-contrast h2,
+body.contact-page.high-contrast h3,
+body.contact-page.high-contrast p,
 body.contact-page.high-contrast label,
-body.contact-page.high-contrast p {
+body.contact-page.high-contrast li {
   color: #fff !important;
 }
 
+body.about-page.high-contrast h2,
+body.about-page.high-contrast h3,
+body.contact-page.high-contrast h2,
+body.contact-page.high-contrast h3 {
+  color: #f1c40f !important;
+}
+
+body.about-page.high-contrast a,
+body.contact-page.high-contrast a {
+  color: #00ffff !important;
+}
+
+body.about-page.high-contrast a:hover,
+body.contact-page.high-contrast a:hover {
+  color: #f1c40f !important;
+}
+
+body.about-page.high-contrast input,
+body.about-page.high-contrast textarea,
 body.contact-page.high-contrast input,
 body.contact-page.high-contrast textarea {
   background: #000 !important;
@@ -553,12 +605,14 @@ body.contact-page.high-contrast textarea {
   border: 1px solid #fff !important;
 }
 
+body.about-page.high-contrast button,
 body.contact-page.high-contrast button {
   background: #f1c40f !important;
   color: #000 !important;
   border: 2px solid #fff !important;
 }
 
+body.about-page.high-contrast button:hover,
 body.contact-page.high-contrast button:hover {
   background: #d4ac0d !important;
   color: #000 !important;
