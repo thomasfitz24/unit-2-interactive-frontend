@@ -29,6 +29,15 @@ This repository contains my Unit 2 project for the Level 5 Diploma in Web Applic
 - As a user, I want to contact the developer via the Contact form so I can share feedback or ask questions.
 
 
+## Features & Highlights
+
+* **Live Weather Data** – Powered by the OpenWeatherMap API, delivering current, hourly, and 5-day forecasts.
+* **Interactive Weather Map** – Visualize clouds, precipitation, temperature, and wind with Leaflet.js overlays.
+* **Accessibility First** – Includes a High Contrast Mode, ARIA live regions, and keyboard-friendly navigation.
+* **Responsive Design** – Works seamlessly across desktop, tablet, and mobile devices.
+* **Simple Navigation** – Clean header and footer with clear links to Home, About, and Contact.
+* **Engaging Visuals** – Autumn-themed background and card-based layout for readability and appeal.
+
 ## Wireframes & Design Rationale
 
 ### Design Rationale
@@ -45,6 +54,24 @@ SkyCast was designed to be clean, modern, and user-friendly, with a strong focus
 
 Initial layout ideas and wireframes were sketched to plan content structure before development.
  *— homepage, About page, Contact form, map view*).
+
+## Mobile and Tablet Considerations
+
+The site has been thoroughly tested on iPhone and iPad devices to ensure full responsiveness. Adjustments were made to the layout, grid system, and header design to maintain usability and readability across all screen sizes.
+
+**Key changes for smaller screens:**
+
+* Navigation collapses into a vertical column for easier tapping.
+* Search bar stacks input and button vertically.
+* Forecast grids adapt from 5-columns to 1-column (mobile) or 2-columns (small tablets).
+* Hourly forecast shows 2 cards per row on mobile for better readability.
+* Map height reduces for smaller screens.
+* Footer stacks vertically with centered text.
+
+**Screenshots of testing (iPhone & iPad):**
+
+*(Insert screenshots here from your testing)*
+
 
 # Weather Dashboard (SkyCast)
 
