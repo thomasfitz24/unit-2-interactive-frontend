@@ -17,6 +17,67 @@ This repository contains my Unit 2 project for the Level 5 Diploma in Web Applic
 - [Future Enhancements](#future-enhancements)
 
 
+## Git Command Timeline
+
+1. **Initial commit - Unit 2 project setup**
+2. **Initial commit**
+3. **Resolved merge conflicts with remote main**
+4. **Starting Unit 2: Added index.html, css, js, and updated README**
+5. **Set up Weather Dashboard starter files**
+6. **Added CSS reset and header styling**
+7. **Linked stylesheet correctly and updated HTML head**
+8. **Restored header navigation with links**
+9. **Added search section heading and error message placeholder**
+10. **Added search section with styling and README update**
+11. **Set up base JavaScript structure for search button**
+12. **Improved accessibility and responsiveness for all devices and impaired users**
+13. **Inserted OpenWeatherMap API key and tested weather fetch**
+14. **Switch to geocoding + weather by coordinates to fix 'city not found' edge cases**
+15. **Geocoding-based weather fetch and styled result card**
+16. **Rename weather-nums to weather-stats; clean duplicate CSS**
+17. **Added 5-day forecast section with cards and updated styles**
+18. **Updated README to include new features: sunrise, sunset, flags, forecast details**
+19. **Full update: current weather with flag/sunrise/sunset, 5-day forecast, hourly forecast, Met Office styling**
+20. **Updated README to include hourly forecast and styling changes**
+21. **Updated layout: current weather on left, 5-day forecast on right**
+22. **Updated README to document new side-by-side layout for current weather and forecast**
+23. **Updated header with SkyCast branding, boxed nav links, redesigned search bar**
+24. **Made search bar responsive with max-width and mobile adjustments**
+25. **Unified header, main forecast, and hourly forecast widths for consistent layout**
+26. **Updated layout: all sections full-width to fit any screen**
+27. **Fixed High Contrast mode: current weather meta boxes visible with dark background and high contrast text**
+28. **Updated README with High Contrast Mode details, full color palette with hex codes, typography, and development process for assignment**
+29. **Added geolocation support: auto-loads weather for user's current location**
+30. **Fixed layout: current weather and 5-day forecast side by side, corrected loading/render issues**
+31. **Updated footer: matched header color, added navigation links, and included company description**
+32. **Updated header padding to 40px 40px for consistent spacing**
+33. **Fixed styling: removed bullet points from meta lists and aligned hourly forecast with main layout**
+34. **Added interactive weather map with selectable overlay layers (Clouds, Precipitation, Temperature, Wind)**
+35. **Updated README with new features: weather map overlays, styling fixes, and accessibility improvements**
+36. **Fix: hide forecast, hourly, and map sections when city search fails**
+37. **Created about.html file, starting About page**
+38. **Added base layout for about.html with header and footer**
+39. **Removed background image from about.html by applying about-page override**
+40. **Expanded About page with Our Story, Technology, Commitment sections and styled with card layout**
+41. **Added contact form to About page and adjusted styling to match About section width**
+42. **Updated README with About page, Contact form, weather map, and styling improvements**
+43. **Fix: Enable high contrast toggle on About page (prevents JS errors)**
+44. **Fix: Make About page paragraph text white in High Contrast mode**
+45. **Add: Initial Contact page with header and footer**
+46. **Add: Basic contact form structure to Contact page**
+47. **Update: Contact page with white background and high contrast support**
+48. **Update: Added info section to Contact page**
+49. **Checkpoint: Current state before fixing GitHub Pages heading/image issues**
+50. **Fix: cleaned HTML structure, updated footer links, improved accessibility across pages**
+51. **Docs: added Table of Contents to README**
+52. **Docs: added User Stories section to README**
+53. **Docs: added Wireframes & Design Rationale section to README**
+54. **Fix: corrected new W3C validation errors on index.html (semantic structure and attribute fixes)**
+55. **Fix: W3C validation errors on about.html (added hidden heading to first section for accessibility and structure)**
+56. **docs: updated README with mobile/tablet considerations and testing notes**
+57. **docs: add Accessibility Notes section to README**
+58. **Expanded Development Process section into detailed Development Notes & Workflow, including mobile fixes, accessibility, and validation updates**
+
 
 ## User Stories
 
@@ -349,3 +410,26 @@ This project was developed in stages to demonstrate version control and incremen
 * Multiple overlay support (toggle multiple layers at once)
 * Forecast charts (temperature, humidity, wind trends)
 * Dedicated Contact page with backend integration for form submissions
+
+
+## Credits
+
+* **API & Data** : [OpenWeatherMap](https://openweathermap.org/) for live weather data.
+* **Mapping** : [Leaflet.js]() with [OpenStreetMap](https://www.openstreetmap.org/) tiles for interactive weather maps.
+* **Inspiration** : Project structure and workflow influenced by Code Institute guidelines for Unit 2.
+* **Accessibility References** : WCAG guidelines and online resources for implementing ARIA roles, live regions, and high-contrast color schemes.
+* **Testing** : Browser DevTools (Chrome, Safari, Edge) and device testing (iPhone, iPad).
+* **Icons/Images** : Weather icons and assets provided by OpenWeatherMap; custom autumn background image created for theme consistency.
+
+---
+
+## Final Notes
+
+This project demonstrates my ability to design and implement a fully responsive, accessible, and visually appealing front-end web application.
+
+* All pages validated with **W3C HTML & CSS validators** — no errors remain.
+* Mobile and tablet testing completed on  **iPhone and iPad** , with layout fixes applied.
+* Accessibility implemented via  **High Contrast Mode, ARIA roles, semantic HTML, and keyboard navigation** .
+* GitHub version control was used throughout development, with **58 commits** documenting each stage of progress.
+
+SkyCast (Weather Dashboard) is now complete and ready for deployment. Future work may include adding backend functionality for form submissions, saving favorite cities, and multi-language support.
