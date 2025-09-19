@@ -617,3 +617,120 @@ body.contact-page.high-contrast button:hover {
   background: #d4ac0d !important;
   color: #000 !important;
 }
+/* --------------------------
+   Responsive Design
+--------------------------- */
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .header-right {
+    margin-top: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-forecast {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .hourly-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .search {
+    padding: 0 20px;
+  }
+
+  .map {
+    padding: 10px 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .header-left,
+  .header-right {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: row;        /* Nav links inline */
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  /* High Contrast button centered on next line */
+  .contrast-btn {
+    display: block;
+    margin: 12px auto 0 auto;
+  }
+
+  .header-left h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Search bar full-width for mobile */
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .forecast-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hourly-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #map {
+    height: 300px;
+  }
+
+  .contact-form,
+  .contact-intro {
+    padding: 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}

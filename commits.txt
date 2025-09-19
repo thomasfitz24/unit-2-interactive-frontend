@@ -1,0 +1,58 @@
+cc32128 2025-09-14 | Expanded Development Process section into detailed Development Notes & Workflow, including mobile fixes, accessibility, and validation updates
+18707af 2025-09-14 | docs: add Accessibility Notes section to README
+38c7ab0 2025-09-14 | docs: updated README with mobile/tablet considerations and testing notes
+95abbb9 2025-09-14 | Fix: W3C validation errors on about.html (added hidden heading to first section for accessibility and structure)
+13a16ca 2025-09-14 | Fix: corrected new W3C validation errors on index.html (semantic structure and attribute fixes)
+ea0599e 2025-09-14 | Docs: added Wireframes & Design Rationale section to README
+b039207 2025-09-14 | Docs: added User Stories section to README
+92cc461 2025-09-14 | Docs: added Table of Contents to README
+ec88f37 2025-09-14 | Fix: cleaned HTML structure, updated footer links, improved accessibility across pages
+e4df2e8 2025-09-14 | Checkpoint: Current state before fixing GitHub Pages heading/image issues
+2a7aa37 2025-09-14 | Update: Added info section to Contact page
+76fdab5 2025-09-14 | Update: Contact page with white background and high contrast support
+77e037c 2025-09-14 | Add: Basic contact form structure to Contact page
+408979c 2025-09-14 | Add: Initial Contact page with header and footer
+c463e50 2025-09-14 | Fix: Make About page paragraph text white in High Contrast mode
+2fdd47d 2025-09-14 | Fix: Enable high contrast toggle on About page (prevents JS errors)
+9e42f7f 2025-09-14 | Updated README with About page, Contact form, weather map, and styling improvements
+ffdbe31 2025-09-14 | Added contact form to About page and adjusted styling to match About section width
+3a3206a 2025-09-14 | Expanded About page with Our Story, Technology, Commitment sections and styled with card layout
+a1501db 2025-09-14 | Removed background image from about.html by applying about-page override
+c81981d 2025-09-14 | Added base layout for about.html with header and footer
+d05849d 2025-09-14 | Created about.html file, starting About page
+629951c 2025-09-14 | Fix: hide forecast, hourly, and map sections when city search fails
+87dcee2 2025-09-06 | Updated README with new features: weather map overlays, styling fixes, and accessibility improvements
+073c69d 2025-09-06 | Added interactive weather map with selectable overlay layers (Clouds, Precipitation, Temperature, Wind)
+ff13cea 2025-09-06 | Fixed styling: removed bullet points from meta lists and aligned hourly forecast with main layout
+0a59238 2025-09-06 | Updated header padding to 40px 40px for consistent spacing
+166e064 2025-09-06 | Updated footer: matched header color, added navigation links, and included company description
+a005d57 2025-09-06 | Fixed layout: current weather and 5-day forecast side by side, corrected loading/render issues
+14c602e 2025-09-06 | Added geolocation support: auto-loads weather for user's current location
+ed12033 2025-09-06 | Updated README with High Contrast Mode details, full color palette with hex codes, typography, and development process for assignment
+e0806de 2025-09-06 | Fixed High Contrast mode: current weather meta boxes visible with dark background and high contrast text
+0ebdb20 2025-09-06 | Updated layout: all sections full-width to fit any screen
+cdedb72 2025-09-06 | Unified header, main forecast, and hourly forecast widths for consistent layout
+1b49276 2025-09-06 | Made search bar responsive with max-width and mobile adjustments
+606392a 2025-09-06 | Updated header with SkyCast branding, boxed nav links, redesigned search bar
+1978d65 2025-09-06 | Updated README to document new side-by-side layout for current weather and forecast
+68ce1f5 2025-09-06 | Updated layout: current weather on left, 5-day forecast on right
+d43445d 2025-09-06 | Updated README to include hourly forecast and styling changes
+c8a51e6 2025-09-06 | Full update: current weather with flag/sunrise/sunset, 5-day forecast, hourly forecast, Met Office styling
+bb2bb79 2025-09-06 | Updated README to include new features: sunrise, sunset, flags, forecast details
+722c197 2025-09-06 | Added 5-day forecast section with cards and updated styles
+efd99a4 2025-09-06 | Rename weather-nums to weather-stats; clean duplicate CSS
+4462a1b 2025-09-06 | Geocoding-based weather fetch and styled result card
+dd584e7 2025-09-06 | Switch to geocoding + weather by coordinates to fix 'city not found' edge cases
+9c9faed 2025-09-06 | Inserted OpenWeatherMap API key and tested weather fetch
+0fffd9d 2025-09-06 | Improved accessibility and responsiveness for all devices and impaired users
+7423e2d 2025-09-06 | Set up base JavaScript structure for search button
+e7d1337 2025-09-06 | Added search section with styling and README update
+7fdbbba 2025-09-06 | Added search section heading and error message placeholder
+84f2b2b 2025-09-06 | Restored header navigation with links
+e2bcbdb 2025-09-06 | Linked stylesheet correctly and updated HTML head
+760e8be 2025-09-06 | Added CSS reset and header styling
+6b0b2f8 2025-09-06 | Set up Weather Dashboard starter files
+97b1ede 2025-09-06 | Starting Unit 2: Added index.html, css, js, and updated README
+8f0be47 2025-09-06 | Resolved merge conflicts with remote main
+7926ccf 2025-09-06 | Initial commit
+498d4e4 2025-09-06 | Initial commit - Unit 2 project setup
