@@ -10,7 +10,7 @@ This repository contains my Unit 2 project for the Level 5 Diploma in Web Applic
 * [Project Overview](#project-overview)
 * [User Stories](#user-stories)
 * [Features &amp; Highlights](#features--highlights)
-* [Wireframes &amp; Design Rationale](#wireframes--design-rationale)
+* [Wireframe](#wireframes--design-rationale)
 * [Mobile and Tablet Considerations](#mobile-and-tablet-considerations)
 * [Development Notes &amp; Workflow](#development-notes--workflow)
 * [Accessibility Notes](#accessibility-notes)
@@ -56,9 +56,7 @@ The dashboard is fully responsive, visually engaging with an autumn background i
 
 ---
 
-## Wireframes & Design Rationale
-
-### Design Rationale
+## Wireframe
 
 * **Autumn theme** : visually appealing and distinct.
 * **Card-based layout** : weather data grouped for clarity.
