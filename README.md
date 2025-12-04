@@ -66,6 +66,34 @@ The dashboard is fully responsive, visually engaging with an autumn background i
 
 ## Rationale
 
+SkyCast is a responsive weather dashboard designed to give users a clear, accessible view of current and future weather conditions in any city. The project brings together live API data, an interactive map, and multiple forecast views (current, 5-day, hourly) in a single interface. It was built as my Unit 2 project for the Level 5 Diploma in Web Application Development to demonstrate practical front-end skills in JavaScript, API integration, responsive layout, and accessibility.
+
+The idea for SkyCast came from the limitations of many basic weather apps and browser widgets, which often show only a single forecast view, provide limited context, or lack accessibility features. As someone who regularly checks weather across different timescales (today, the week ahead, and the next few hours), I wanted a dashboard that felt more informative and “dashboard-like” rather than just a basic card with temperature and an icon. At the same time, I wanted the project to feel like a realistic product that could be extended in the future, rather than a small one-page demo.
+
+In a wider context, weather information is a common use-case for web apps, but the quality of the implementation can vary significantly. Some sites are cluttered, visually inconsistent, or difficult to use on mobile devices. Others neglect accessibility: low-contrast colour schemes, missing ARIA attributes, and lack of keyboard support all create barriers for users with visual or motor impairments. This project was an opportunity to design a weather dashboard that is both visually engaging and built with accessibility in mind from the outset.
+
+SkyCast focuses on solving a few core problems:
+
+- Bringing together **current**, **5-day**, and **hourly** forecasts in a way that is easy to scan.  
+- Making the data understandable and visually structured, rather than just dumping raw API output.  
+- Ensuring that the interface remains usable and readable for users who rely on keyboard navigation or high contrast.  
+- Providing a sense of geographic context through an interactive map, rather than just text-based city names.
+
+The solution is a multi-page site with a consistent layout and navigation. The main dashboard lets users search for a city and then displays:
+
+- Current weather, including temperature, conditions, and key stats.  
+- A 5-day forecast laid out as cards with dates, icons, and summary data.  
+- An hourly forecast section to help users see short-term changes.  
+- An interactive Leaflet.js map with OpenWeather overlays for clouds, precipitation, temperature, and wind.  
+
+In addition, there is an About page explaining the purpose and technology behind the app, and a Contact page with a form so users can reach the developer. This helps the project feel like a small, cohesive product rather than a single standalone page.
+
+Under the hood, SkyCast uses the OpenWeatherMap API combined with JavaScript to fetch and process weather data. Geocoding is used to improve city search reliability and support edge cases like duplicated city names. The interface is built with semantic HTML5, ARIA roles, and live regions for dynamic updates, so screen readers can announce changes when new weather data loads or errors occur. The High Contrast Mode toggle was added specifically to support users with visual impairments, switching the colour scheme to a high-contrast palette while preserving hierarchy between cards, text, and alerts. All pages were validated using W3C tools, and the structure was refined until the code passed without errors.
+
+This project deliberately stays within a front-end scope. There is no back-end, user login, or database for saving preferences; the contact form is presentational rather than wired to a server. These limitations reflect the Unit 2 brief and the focus on client-side JavaScript, responsiveness, and accessibility. However, the way the code is structured—separating concerns between layout, API calls, and UI updates—means that features like persisted favourite cities, localisation, or a real contact handler could be added in future iterations.
+
+Overall, SkyCast was created to show how a common use case (checking the weather) can be turned into a more thoughtful, accessible web application. By combining live API data, responsive design, high-contrast support, ARIA-aware interactions, and an interactive map, the project demonstrates how front-end technologies can be used to build a dashboard that is both visually engaging and inclusive for a wide range of users.
+
 
 
 ---
