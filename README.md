@@ -10,7 +10,8 @@ This repository contains my Unit 2 project for the Level 5 Diploma in Web Applic
 * [Project Overview](#project-overview)
 * [User Stories](#user-stories)
 * [Features &amp; Highlights](#features--highlights)
-* [Wireframe](#wireframes--design-rationale)
+* [Wireframe](#wireframe)
+* [Rationale](#Rationale)
 * [Mobile and Tablet Considerations](#mobile-and-tablet-considerations)
 * [Development Notes &amp; Workflow](#development-notes--workflow)
 * [Accessibility Notes](#accessibility-notes)
@@ -58,16 +59,13 @@ The dashboard is fully responsive, visually engaging with an autumn background i
 
 ## Wireframe
 
-* **Autumn theme** : visually appealing and distinct.
-* **Card-based layout** : weather data grouped for clarity.
-* **High Contrast Mode** : inclusive for visually impaired users.
-* **Consistent navigation** across all pages.
-* **Responsive grid** : adapts smoothly to all devices.
-
 ### Wireframes
 <img width="1024" height="1536" alt="Wireframes3" src="https://github.com/user-attachments/assets/2761a11c-5a5e-4c2c-bc4a-1af71af00746" />
 <img width="1024" height="1536" alt="Wireframes2" src="https://github.com/user-attachments/assets/d26c506a-c6e6-4d44-a61f-0440bdb15fab" />
 <img width="1024" height="1536" alt="Wireframes" src="https://github.com/user-attachments/assets/43f474c8-7768-4050-a992-bf5a27d49601" />
+
+## Rationale
+
 
 
 ---
